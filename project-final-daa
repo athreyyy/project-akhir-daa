@@ -1,0 +1,323 @@
+#include <iostream> // Di gunakan untuk menjalankan perintah input dan output. seperti cin, cout.
+#include <conio.h> // Di gunakan untuk membuat antarmuka dengan pengguna. seperti getch
+#include <string.h> // Di gunakan untuk membaca String
+#include <dos.h> // Di gunakan untuk membuat perintah delay.
+#include<iomanip> // Digunakan untuk ngerapihin spasi membuat table
+#include<cstdlib> // Header yang berisi fungsi-fungsi umum termasuk manajemen pengelolaan memori, pembuatan angka acak, berkomunikasi dengan environment, aritmatika, pencarian, pengurutan, dan konversi. 
+#include <fstream>
+using namespace std; //Menggunakan skope std sebagai Nama skope untuk penggunaan instruksi, misalnya std::cin std::cout 
+
+void awal();
+void utama();
+void pendaftaran();
+void pembayaran();
+void terdaftar();
+void informasi();
+void panduan();
+void pendaftaran2();
+
+int mhs=-1,i;
+int n,b;
+int lagi;
+int pilih;
+int utm;
+
+
+
+
+struct data_mahasiswa{
+	string nama;
+	int nim;
+	string fakultas;
+	string jurusan;
+	string ukuran;
+	string status;
+	string toga;
+}data[500];
+
+main(){
+
+void awal();{
+cout <<"|----------------------------------------------------------------------------------------- |"<<endl; // tampilan pada saat awal menjalankan program
+cout <<"| Selamat datang di program pendaftaran wisuda mahasiswa Esa Unggul fakultas Ilmu Komputer |"<<endl;
+cout <<"|----------------------------------------------------------------------------------------- |"<<endl;
+cout <<" Silahkan masukan Nama dan NIM untuk melanjutkan"<<endl;
+cout <<" Nama\t: ";cin>>data[b].nama;
+cout <<" NIM\t: ";cin>>data[b].nim;
+}
+void utama();{	
+	u1:
+		system("cls");
+cout <<"|-----------------------------------------------------------------------------------------------|"<<endl;
+cout <<"|\t\t\t\t\t\tMenu Utama\t\t\t\t\t|"<<endl;
+cout <<"|-----------------------------------------------------------------------------------------------|"<<endl;
+cout <<" 1. Layanan menu pendaftaran "<<endl;
+cout <<" 2. Informasi "<< endl;
+cout <<" 3. Panduan ukuran toga"<<endl;
+cout <<" 4. Keluar"<<endl;
+cout <<" Silahkan Pilih:"; cin>>utm;
+
+	if(utm == 1){
+		goto p1;
+	}
+	else if(utm == 2){
+		goto i1;
+	}
+	else if(utm == 3){
+		goto p2;
+	}
+	else if(utm == 4){
+		exit (0);
+	}
+}
+
+void pendaftaran();{
+	p1:
+system("cls"); //untuk menghapus screen fungsinya sama dengan clrscr()
+cout <<"\tLAYANAN MENU PENDAFTARAN WISUDA"<<endl;
+cout <<"---------------------------------------------------------"<<endl;
+cout <<"LAYANAN YANG ADA :\n";
+cout <<"1.PENDAFTARAN WISUDA MAHASISWA\n"; //untuk menginput mahasiswa yang ingin mendaftar
+cout <<"2.METODE PEMBAYARAN\n"; //pilihan untuk melihat metode pembayaran yang tersedia
+cout <<"3.MAHASISWA YANG TERDAFTAR\n"; //menampilkan mahasiswa yang sudah terdaftar
+cout <<"4.CETAK STRUK PENGAMBILAN\n";
+cout <<"5.KEMBALI KE MENU UTAMA\n"<<endl;
+cout <<"Silahkan pilih menu:"; cin>>pilih;
+	if(pilih == 1){
+		goto p3;
+	}
+	else if (pilih == 2){
+		goto pem1;
+	}
+	else if (pilih == 3){
+		goto d1;
+	}
+	else if (pilih == 4){
+		goto s1;
+	}
+	else if (pilih == 5){
+		goto u1;
+	}
+}
+
+void informasi();{
+i1:
+system("cls");
+cout <<" tanggal acara\t: 23 Agustus 2077"<<endl;
+cout <<" tempat acara\t: Hall Esa Unggul"<<endl;
+cout <<" waktu acara\t: 10.00 - Selesai"<<endl;
+cout <<" informasi lebih lanjut ke kontak di bawah ini"<<endl;
+cout <<" @adminesaunggul"<<endl;
+	cout<<" 1.Kembali ke Menu Utama\n\n";
+    cout<<" 2.Keluar dari program\n";
+    cout<<" _____________________________\n\n";
+    cout<<" Masukan Pilihan Anda : "; cin>>pilih;
+     cout<<endl;
+     if(pilih==1)
+	 {
+      goto u1;
+     }
+     else if(pilih==2)
+  	 {
+      exit(0);
+     }
+ 
+	
+}
+void panduan();{
+	p2:
+		int menu1;
+system("cls");
+cout <<" berikut data ukuran toga berdasarkan tinggi dan lebar toga.Bagi wisudawan diharapkan memilih ukuran toga sesuai dengan yang di inginkan. Pemilihan toga dapat diinput di menu verifikasi pembayaran. Toga yang telah dipesan tidak dapat ditukar kembali\n";
+cout <<"\n";
+cout <<"+==========================================================================+\n";
+cout <<"| Ukuran Toga | Lebar Bahu | Panjang Lengan | Lingkar Badan | Panjang Toga |\n";
+cout <<"+==========================================================================+\n";
+cout <<"|     S       |     46     |      48        |      134      |       97     |\n";
+cout <<"|     M       |     47     |      50        |      136      |      100     |\n";
+cout <<"|     L       |     50     |      53        |      140      |      104     |\n";
+cout <<"|     XL      |     53     |      57        |      142      |      108     |\n";
+cout <<"|     XXL     |     64     |      62        |      196      |      127     |\n";
+cout <<"+==========================================================================+\n";
+cout <<"\n";
+cout <<" Pengambilan Toga"<<endl;
+cout <<" Waktu\t: 31 Juli sampai 12 Agustus 2077"<<endl;
+cout <<" Tempat\t: Universitas Esa Unggul"<<endl;
+cout <<"\n";
+cout<<" 1.Kembali ke Menu Utama\n\n";
+    cout<<" 2.Keluar dari program\n";
+    cout<<" _____________________________\n\n";
+    cout<<" Masukan Pilihan Anda : "; cin>>pilih;
+     cout<<endl;
+     if(pilih==1)
+	 {
+      goto u1;
+     }
+     else if(pilih==2)
+  	 {
+      exit(0);
+     }
+
+}
+void pendaftaran2();{
+ 		p3:
+ 		int balik;
+       system("cls");
+       mhs++;
+       cout<<"|+==================================+\n";
+       cout<<"|           PENDAFTARAN             |\n";
+       cout<<"|+==================================+\n";
+       cout<<"Masukkan Jumlah Data ke:"<<mhs+1<<endl;
+       cout<<"|Nama       	: ";getchar(); getline(cin,data[mhs].nama);
+       cout<<"|NIM 		: ";cin>>data[mhs].nim;
+       cout<<"|Fakultas   	: ";getchar();getline(cin,data[mhs].fakultas);
+       cout<<"|jurusan    	: ";getchar();getline(cin,data[mhs].jurusan);
+       cout<<"|Size Toga    : ";cin>>data[mhs].toga;
+  	   cout<<"1. Tambah Data Lagi"<<endl;
+  	   cout<<"2. Kembali Ke Menu"<<endl;
+  	   cout<<"Masukkan Pilihan:";cin>>balik;
+ 	   cout<<"\n";
+ 	if(balik == 1){
+ 		goto p3;
+	 }
+	else if (balik == 2)
+	{
+	cout <<"+=================================+\n";
+	cout <<"|     Data berhasil diproses      |\n";
+	cout <<"|                                 |\n";
+	cout <<"|           Terima kasih          |\n";
+	cout <<"+=================================+\n";	
+		system("pause");
+		goto p1;
+		
+	}
+  
+   }
+   
+   
+   
+   
+   
+void pembayaran();	{ //awal menu 
+	pem1:
+		int k,spp,up,tb;
+system("cls");
+cout <<"|---------------------------------------|"<<endl;
+cout <<"|           METODE PEMBAYARAN           |"<<endl;
+cout <<"|---------------------------------------|"<<endl;
+
+	cout<<"1. Teknik Informatika \n "<<endl;
+	cout<<"2. Sistem Informasi\n "<<endl;
+
+	cout<<"Pilih Jurusan	= ";cin>>k;
+	
+	if (k== 1){ //harga untuk jurusan teknik Informatika
+	spp=250000;
+	up=50000;
+	}
+	else if (k== 2){ //harga untuk jurusan sistem informasi
+	spp=350000;
+	up=50000;
+}
+	system("cls");
+	tb=spp+up;
+	cout <<"--------------------------"<<endl<<endl;
+	cout<<"Uang Yang harus dibayar	="<<tb<<endl; //jumlah tagihan
+	cout<<"Transfer Ke rekening Dibawah ini:\n"<<endl;
+	cout<<"--------------------------"<<endl<<endl;
+	cout<<"BANK MANDIRI\t: 070001855555"<<endl; //rekening yang tersedia
+	cout<<"BANK BCA\t: 6860148755"<<endl;
+	cout<<"atas nama\t: Esa Unggul"<<endl;
+	cout<<"sudah lunas/belum :";cin>>data[mhs].status;
+    cout<<" 1.Kembali ke Menu Utama\n\n";
+    cout<<" 2.Keluar dari program\n";   
+	   cout<<"Silahkan pilih menu : ";cin>>lagi;
+     
+	if (lagi==1)
+        {
+         goto p1;
+        }
+       else if (lagi==2)
+        {
+         exit(0);
+        } 
+}
+
+void daftar(); {
+	int cari;
+	 d1:   
+       system("cls");
+    	cout<<"+==================================+\n";
+    	cout<<"|       MAHASISWA TERDAFTAR        |\n";
+    	cout<<"+==================================+\n";
+    	cout<<" Masukan kode NIM :";cin>>cari;
+		cout<<"\t\t\t\n"<<endl;
+		cout<<endl; 
+       for (i=0;i<=mhs;i++)
+	   {
+       	if(cari==data[i].nim)
+		   {
+	   cout<<"Nama\t\t\t: "<<data[i].nama<<endl;
+       cout<<"NIM\t\t\t: "<<data[i].nim<<endl;
+       cout<<"Fakultas\t\t: "<<data[i].fakultas<<endl;
+       cout<<"jurusan\t\t\t: "<<data[i].jurusan<<endl;
+       cout<<"Size toga\t\t\t:"<<data[i].toga<<endl;
+       cout<<"Status Pembayaran:"<<data[i].status<<endl;
+       cout<<"\n";
+       cout<<"1. cek kembali"<<endl;
+  	   cout<<"2.kembali ke menu "<<endl;
+  	   cout<<"Masukkan Pilihan:";cin>>lagi;
+   }
+}
+   if (lagi==1)
+        {
+         goto d1 ; 
+        }
+       else if (lagi== 2)
+        {
+         goto p1; //keluar
+        }
+
+}
+
+void cetak();{
+int cetak;
+s1:
+ofstream file;
+    	system("cls");
+    	file.open("Bill.txt");
+    	cout<<"+==================================+\n";
+    	cout<<"|         STRUK PENGAMBILAN        |\n";
+    	cout<<"+==================================+\n";
+    	cout<<" Masukan kode NIM :";cin>>cetak;
+		cout<<"\t\t\t\n"<<endl;
+		cout<<endl; 
+       for (i=0;i<=mhs;i++){
+       	
+	   if(cetak==data[i].nim)
+		   {
+       
+       file<<"+==================================+\n";
+	   file<<"|         STRUK PENGAMBILAN        |\n";
+	   file<<"+==================================+\n";
+	   file<<"|Nama       	: "<<data[i].nama<<endl;
+       file<<"|NIM 		: "<<data[i].nim<<endl;
+       file<<"|Fakultas   	: "<<data[i].fakultas<<endl;
+       file<<"|jurusan    	: "<<data[i].jurusan<<endl;
+       file<<"|Size Toga    : "<<data[i].toga<<endl;
+       file<<"|Status Pembayaran :"<<data[i].status<<endl;
+       file<<"\n";
+       file<<"Mohon dibawa saat pengambilan toga";
+	}
+ }
+ 	   cout<<"1.kembali ke menu"<<endl;
+ 	   cout<<"2. cetak kembali"<<endl;
+ 	   cout<<"pilih :";cin>>cetak;
+ 	   if(cetak==1){
+ 	   	goto p1;
+		}
+		else if (cetak==2){
+		goto s1;
+		}
+}
+}
